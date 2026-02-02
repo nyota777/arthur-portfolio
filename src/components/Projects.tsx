@@ -6,6 +6,7 @@ import optiBloodImg from '../assets/optiblood_image.png';
 import nairobiRagImg from '../assets/rag_Nairobi.png';
 import creditRiskImg from '../assets/AI_credit_risk_assesment.png';
 import expenseMasterImg from '../assets/laravel-expenses-manager-table.png';
+import yazuaPreviewImg from '../assets/yazuawebsite_image.png';
 
 export function Projects() {
   const projects = [
@@ -57,6 +58,105 @@ export function Projects() {
         <p className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
           A selection of projects showcasing my work in AI, Machine Learning, and full-stack system development.
         </p>
+
+        {/* Featured: Yazua Afrika */}
+        <div className="mb-16 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <div className="p-6 md:p-8">
+            <div className="flex flex-wrap items-center gap-2 mb-4">
+              <span className="px-3 py-1 bg-[#007ACC]/20 dark:bg-[#00A8E8]/20 text-[#007ACC] dark:text-[#00A8E8] rounded-full text-sm font-medium">
+                Featured Project
+              </span>
+            </div>
+            <h3 className="text-gray-900 dark:text-white mb-4 text-2xl md:text-3xl">
+              Yazua Afrika – Organizational Website, Hosting & Email Infrastructure
+            </h3>
+
+            <div className="space-y-6 text-gray-600 dark:text-gray-400">
+              <div>
+                <h4 className="text-gray-900 dark:text-white font-semibold mb-2">Overview</h4>
+                <p>
+                  This was a real-world production project involving end-to-end delivery of an organizational website: development and deployment, domain management, DNS configuration, hosting migration, SSL/security fixes, and professional email infrastructure for Yazua Afrika.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="text-gray-900 dark:text-white font-semibold mb-2">What I Worked On</h4>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Frontend website creation and improvements (HTML, CSS, JavaScript / React where applicable)</li>
+                  <li>Deployment of the website to Netlify</li>
+                  <li>Custom domain setup (yazuaafrika.com) and DNS configuration</li>
+                  <li>Troubleshooting DNS propagation issues, HTTPS/HSTS errors, and broken asset paths (404 errors)</li>
+                  <li>Fixing favicon and asset loading issues after deployment</li>
+                  <li>Connecting and verifying the website with Google Search Console</li>
+                  <li>Email infrastructure management using Zoho Mail</li>
+                  <li>Restoring and validating multiple professional email accounts (info@, accounts@, register@, eric@)</li>
+                  <li>Ensuring MX, SPF, and email routing records were correctly configured</li>
+                  <li>Backup planning for critical email accounts</li>
+                  <li>Coordinating between registrar, hosting provider, Netlify, and email services</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-gray-900 dark:text-white font-semibold mb-2">Tech Stack & Tools</h4>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    'HTML',
+                    'CSS',
+                    'JavaScript',
+                    'Git & GitHub',
+                    'Netlify (hosting & deployment)',
+                    'DNS management (registrar & hosting)',
+                    'Zoho Mail (email hosting)',
+                    'Google Search Console',
+                    'SSL / HTTPS / DNS troubleshooting',
+                  ].map((tool, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1 bg-[#007ACC]/10 dark:bg-[#00A8E8]/10 text-[#007ACC] dark:text-[#00A8E8] rounded-full text-sm"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h4 className="text-gray-900 dark:text-white font-semibold mb-2">Challenges & Solutions</h4>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Resolved domain and nameserver conflicts between hosting providers</li>
+                  <li>Addressed DNS verification delays with correct record configuration and propagation checks</li>
+                  <li>Restored missing email inboxes and fixed email delivery issues</li>
+                  <li>Handled search engine verification and favicon indexing issues</li>
+                  <li>Production debugging in a live environment to fix asset paths and security headers</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-gray-900 dark:text-white font-semibold mb-3">Project Preview</h4>
+                <div className="rounded-lg overflow-hidden border border-gray-200 dark:border-gray-600 aspect-video max-w-4xl">
+                  <ImageWithFallback
+                    src={yazuaPreviewImg}
+                    alt="Yazua Afrika organizational website homepage showing branding and main content sections"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+              <h4 className="text-gray-900 dark:text-white font-semibold mb-3">Live Project Link</h4>
+              <a
+                href="https://yazuaafrika.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#007ACC] hover:bg-[#0066aa] text-white rounded-lg transition-colors duration-300 font-medium"
+              >
+                <ExternalLink className="w-5 h-5" />
+                Visit Live Website
+              </a>
+            </div>
+          </div>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
